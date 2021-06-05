@@ -5,13 +5,10 @@ CAR RENTAL system for QBUS Servers, Easy Functionality, and Highly Customizable.
 ### [PREVIEW](https://youtu.be/pki6ms0_Ods)
 
 ## FEATURES 
-- Time Based Car Renting System
-- Highly Customizable using Config
-- Damage Charges for Rented Vehicles
-- All Slots are in sync for All Players. 
-- Refer to the Preview for more info.
+[Lots of stuff! So please watch the Video!](https://youtu.be/pki6ms0_Ods)
 
 ## SETUP
+- **Run the SQL file included with the REPOSITORY. **
 - I would just suggest checking the `CONFIG.LUA` for once to ensure that everything is as per your needs. 
 - Change fxversion in fxmanifest as required. 
 
