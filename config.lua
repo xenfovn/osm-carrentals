@@ -95,4 +95,4 @@ CRConfig.DamageCharges = {
 CRConfig.PrimaryColor = {r = 51, g = 136, b = 255, a = 255} -- Use RGB color picker
 CRConfig.SecondaryColor = {r = 33, g = 244, b = 218, a = 255} -- Use RGB color picker	
 
-CRConfig.Release = 1.0.0
+CRConfig.Release = '1.0.0'
