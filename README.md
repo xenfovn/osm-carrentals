@@ -24,3 +24,6 @@ One of the Best Releases I have done so far. It took a lot of effort from my sid
 
 ## [CONTRIBUTE to OSMFX](https://contribute.osmfx.ml)
 This is not a donation link lmao! If you want to help me by testing my future releases, or you can contribute into projects by any other way, join my Discord and you can fill this application and we all can work together to make it easier for me to do the releases. (Idea from OP-FW)
+
+## LICENSE
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License</a>.
