@@ -127,6 +127,13 @@ AddEventHandler('osm-carrentals:server:EngineHealth', function(health)
     end
 end)
 
+RegisterServerEvent('osm-carrentals:server:Carrent')
+AddEventHandler('osm-carrentals:server:Carrent', function(rate)
+	local src = source
+	local Player = ArizOP.Functions.GetPlayer(src)
+	TriggerClientEvent('osm-carrentals:client:SendBillEmail', src, rate)
+end)
+
 function GeneratePlate()
     local plate = tostring(GetRandomNumber(1)) .. GetRandomLetter(2) .. tostring(GetRandomNumber(3)) .. GetRandomLetter(2)
     QBCore.Functions.ExecuteSql(true, "SELECT * FROM `player_vehicles` WHERE `plate` = '"..plate.."'", function(result)
