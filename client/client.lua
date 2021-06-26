@@ -199,6 +199,7 @@ Citizen.CreateThread(function()
 						if IsControlJustPressed(0, 38) then
 							DisableControlAction(0, 38, true)
 							TriggerServerEvent('osm-carrentals:server:start', ClosestRentalVeh, closeveh, rate)
+							TriggerServerEvent("osm-carrentals:server:Carrent", rate)
 							npbool = true
 							TriggerEvent('StartTick')
 							EnableControlAction(0, 38, true)
@@ -228,6 +229,24 @@ AddEventHandler('osm-carrentals:client:NonPayment', function(veh)
 		TriggerServerEvent('osm-carrentals:server:SetDone', veh)
 		npbool = false
 	end
+end)
+
+
+RegisterNetEvent('osm-carrentals:client:SendBillEmail')
+AddEventHandler('osm-carrentals:client:SendBillEmail', function(amount)
+    SetTimeout(math.random(2500, 4000), function()
+        local gender = "Mr."
+        if ArizOP.Functions.GetPlayerData().charinfo.gender == 1 then
+            gender = "Mrs."
+        end
+        local charinfo = ArizOP.Functions.GetPlayerData().charinfo
+        TriggerServerEvent('arizfw-phone:server:sendNewMail', {
+            sender = "Car Rentals",
+            subject = "Car Rent Costs",
+            message = "Dear " .. gender .. " " .. charinfo.lastname .. ",<br /><br />Hereby you receive an e-mail which shows the cost of the last car rented.<br />The current cost is : <strong>$"..amount.."</strong><br /><br />Note:- After 15 Minutes of renting, you will get charged of overtime of the rented car. So if you dont want to get charged, then kindly return it in 15 Minutes or you will be charged! ",
+            button = {}
+        })
+    end)
 end)
 
 Citizen.CreateThread(function()
