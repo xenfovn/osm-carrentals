@@ -130,7 +130,7 @@ end)
 RegisterServerEvent('osm-carrentals:server:Carrent')
 AddEventHandler('osm-carrentals:server:Carrent', function(rate)
 	local src = source
-	local Player = ArizOP.Functions.GetPlayer(src)
+	local Player = QBCore.Functions.GetPlayer(src)
 	TriggerClientEvent('osm-carrentals:client:SendBillEmail', src, rate)
 end)
 
