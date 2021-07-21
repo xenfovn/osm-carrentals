@@ -236,10 +236,10 @@ RegisterNetEvent('osm-carrentals:client:SendBillEmail')
 AddEventHandler('osm-carrentals:client:SendBillEmail', function(amount)
     SetTimeout(math.random(2500, 4000), function()
         local gender = "Mr."
-        if ArizOP.Functions.GetPlayerData().charinfo.gender == 1 then
+        if QBCore.Functions.GetPlayerData().charinfo.gender == 1 then
             gender = "Mrs."
         end
-        local charinfo = ArizOP.Functions.GetPlayerData().charinfo
+        local charinfo = QBCore.Functions.GetPlayerData().charinfo
         TriggerServerEvent('arizfw-phone:server:sendNewMail', {
             sender = "Car Rentals",
             subject = "Car Rent Costs",
